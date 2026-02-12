@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Programs from "./pages/Programs";
 import Volunteer from "./pages/Volunteer";
@@ -8,7 +9,7 @@ import Contact from "./pages/Contact";
 export default function App() {
   return (
     <BrowserRouter>
-      {/* Navbar here */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/programs" element={<Programs />} />
