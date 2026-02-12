@@ -1,49 +1,28 @@
-function App() {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+
+import Home from "./pages/Home";
+import Programs from "./pages/Programs";
+import Volunteer from "./pages/Volunteer";
+import Careers from "./pages/Careers";
+import Contact from "./pages/Contact";
+
+export default function App() {
   return (
-    <div style={{ fontFamily: "Arial, sans-serif", padding: "40px" }}>
-      <h1 style={{ color: "#0F9D58" }}>GreenPulse Health Initiative</h1>
-      <p>
-        A community-driven health organization focused on outreach,
-        volunteer programs, and sustainable medical support.
-      </p>
+    <Router>
+      <div className="min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black">
+        <Navbar />
 
-      <hr style={{ margin: "30px 0" }} />
-
-      <h2>What We Do</h2>
-      <ul>
-        <li>Community Health Outreach</li>
-        <li>Volunteer Programs</li>
-        <li>Medical Assistance Campaigns</li>
-        <li>Youth Health Education</li>
-      </ul>
-
-      <hr style={{ margin: "30px 0" }} />
-
-      <h2>Get Involved</h2>
-      <p>Volunteer with us or apply for open positions.</p>
-
-      <button style={{
-        padding: "10px 20px",
-        backgroundColor: "#0F9D58",
-        color: "white",
-        border: "none",
-        cursor: "pointer",
-        marginRight: "10px"
-      }}>
-        Apply as Volunteer
-      </button>
-
-      <button style={{
-        padding: "10px 20px",
-        backgroundColor: "#1B5E20",
-        color: "white",
-        border: "none",
-        cursor: "pointer"
-      }}>
-        View Open Positions
-      </button>
-    </div>
+        <main className="mx-auto max-w-6xl px-6 py-10">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/volunteer" element={<Volunteer />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
-
-export default App;
