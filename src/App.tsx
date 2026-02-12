@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <div style={{ fontFamily: "Arial, sans-serif", padding: "40px" }}>
+      <h1 style={{ color: "#0F9D58" }}>GreenPulse Health Initiative</h1>
+      <p>
+        A community-driven health organization focused on outreach,
+        volunteer programs, and sustainable medical support.
       </p>
-    </>
-  )
+
+      <hr style={{ margin: "30px 0" }} />
+
+      <h2>What We Do</h2>
+      <ul>
+        <li>Community Health Outreach</li>
+        <li>Volunteer Programs</li>
+        <li>Medical Assistance Campaigns</li>
+        <li>Youth Health Education</li>
+      </ul>
+
+      <hr style={{ margin: "30px 0" }} />
+
+      <h2>Get Involved</h2>
+      <p>Volunteer with us or apply for open positions.</p>
+
+      <button style={{
+        padding: "10px 20px",
+        backgroundColor: "#0F9D58",
+        color: "white",
+        border: "none",
+        cursor: "pointer",
+        marginRight: "10px"
+      }}>
+        Apply as Volunteer
+      </button>
+
+      <button style={{
+        padding: "10px 20px",
+        backgroundColor: "#1B5E20",
+        color: "white",
+        border: "none",
+        cursor: "pointer"
+      }}>
+        View Open Positions
+      </button>
+    </div>
+  );
 }
 
-export default App
+export default App;
